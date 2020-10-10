@@ -76,7 +76,7 @@ const defaultSettings = {
     "EASYCOMMENT_OOSUGI_SMALL": true,
     "EASYCOMMENT_OOSUGI_PREFIX": true,
     "EASYCOMMENT_OOSUGI_SECONDS": 3,
-    "EASYCOMMENT_OOSUGI_COUNT": 5,
+    "EASYCOMMENT_OOSUGI_COUNT": 10,
 }
 
 browser.storage.sync.get(Object.keys(defaultSettings)).then(async value => {
