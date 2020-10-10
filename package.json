@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "typescript": "^4.0.3",
+    "web-ext-types": "^3.2.1"
+  }
+}

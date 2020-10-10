@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="chrome://global/skin/in-content/common.css">
+        <style>
+            body {
+                background: var(--in-content-box-background);
+                color: var(--in-content-text-color);
+                padding: 1em;
+            }
+            label {
+                display: block;
+                line-height: 1.5em;
+                margin: 0.25em 0;
+                user-select: none;
+            }
+            input {
+                vertical-align: text-bottom;
+            }
+        </style>
+    </head>
+    <body>
+        <p>このページで設定した内容を既に開いている視聴ページに適応させるには<strong>視聴ページのリロードが必要です</strong>(コメント一覧の上にあるリロードボタンでは適応されません)</p>
+        <hr>
+        <h2>普通のかんたんコメント</h2>
+        <p>かんたんコメントを…</p>
+        <label><input type="checkbox" data-optionskey="EASYCOMMENT_NORMAL_AKKARIN">薄くする</label>
+        <label><input type="checkbox" data-optionskey="EASYCOMMENT_NORMAL_SMALL">小さくする (small)</label>
+        <h2>頻度が高いかんたんコメント</h2>
+        <p>
+            同じ人が
+            <select data-optionskey="EASYCOMMENT_OOSUGI_SECONDS" data-range="1,6"></select>
+            秒以内に
+            <select data-optionskey="EASYCOMMENT_OOSUGI_COUNT" data-range="2,10"></select>
+            個のかんたんコメントをしていたら、その人が投稿したコメント(かんたん/普通問わず)を…
+        </p>
+        <label><input type="checkbox" data-optionskey="EASYCOMMENT_OOSUGI_HIDE">非表示にする</label>
+        <label><input type="checkbox" data-optionskey="EASYCOMMENT_OOSUGI_AKKARIN">薄くする</label>
+        <label><input type="checkbox" data-optionskey="EASYCOMMENT_OOSUGI_SMALL">小さくする (small)</label>
+        <label><input type="checkbox" data-optionskey="EASYCOMMENT_OOSUGI_PREFIX">[かんコメ多すぎ] をコメントの最初に付ける (閾値のテスト用)</label>
+        <script src="./options.js" type="module"></script>
+    </body>
+</html>
