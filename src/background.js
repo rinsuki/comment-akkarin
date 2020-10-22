@@ -7,7 +7,7 @@ browser.webRequest.onBeforeRequest.addListener(
         const encoder = new TextEncoder()
         let str = ""
         filter.ondata = e => {
-            str += decoder.decode(e.data)
+            str += decoder.decode(e.data, {stream: true})
         }
         filter.onstop = async () => {
             const settings = await browser.storage.sync.get([
