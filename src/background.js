@@ -19,6 +19,7 @@ browser.webRequest.onBeforeRequest.addListener(
                 "EASYCOMMENT_OOSUGI_AKKARIN",
                 "EASYCOMMENT_OOSUGI_SMALL",
                 "EASYCOMMENT_OOSUGI_PREFIX",
+                "EASYCOMMENT_INCLUDES_DEVICE3DS",
             ])
             str += decoder.decode()
             const obj = JSON.parse(str)
@@ -26,7 +27,7 @@ browser.webRequest.onBeforeRequest.addListener(
             const kantanCommentDic = {}
             const res = obj.map((/** @type {any} */k) => {
                 if (!("chat" in k)) return k
-                if (k.chat.fork === 2) {
+                if (k.chat.fork === 2 || (settings["EASYCOMMENT_INCLUDES_DEVICE3DS"] && k.chat.mail != null && k.chat.mail.includes("device:3DS"))) {
                     if (settings["EASYCOMMENT_NORMAL_AKKARIN"]) k.chat.mail += " _live"
                     if (settings["EASYCOMMENT_NORMAL_SMALL"]) k.chat.mail += " small"
                     if (kantanCommentDic[k.chat.user_id] == null) kantanCommentDic[k.chat.user_id] = []
