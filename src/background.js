@@ -66,7 +66,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
         return {}
     },
-    {urls: ["https://nmsg.nicovideo.jp/api.json/"], types: ["xmlhttprequest"]},
+    {urls: ["https://nmsg.nicovideo.jp/api.json/", "https://nmsg.nicovideo.jp/api.json"], types: ["xmlhttprequest"]},
     ["blocking"]
 )
 
