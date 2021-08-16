@@ -15,6 +15,7 @@
     },
     "permissions": [
         "https://nmsg.nicovideo.jp/",
+        "https://nvcomment.nicovideo.jp/",
         "https://www.nicovideo.jp/",
         "https://sp.nicovideo.jp/",
         "https://embed.nicovideo.jp/",
