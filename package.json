@@ -1,6 +1,15 @@
 {
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c && ./build.sh"
+  },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.3",
+    "rollup": "^2.75.7",
     "typescript": "^4.0.3",
     "web-ext-types": "^3.2.1"
+  },
+  "dependencies": {
+    "tslib": "^2.4.0"
   }
 }
