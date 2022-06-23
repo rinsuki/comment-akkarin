@@ -13,7 +13,7 @@ export type V1Comment = {
 export function doItForV1ServerJSON(settings: SETTINGS, str: string) {
     const obj = JSON.parse(str)
     if (obj.data == null || obj.data.threads == null) {
-        return str
+        return obj
     }
     const threads: {
         id: string,
